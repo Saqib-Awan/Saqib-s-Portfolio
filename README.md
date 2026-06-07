@@ -16,6 +16,7 @@ The portfolio is architected into modular directories, each dedicated to a core 
 ├── 📂 LLM Projects/             # Fine-tuning, prompt engineering, and agentic frameworks
 ├── 📂 RAG Projects/             # Semantic search, vector databases, and knowledge retrieval
 └── 📂 Data Analysis Projects/   # Statistical profiling, EDA, and predictive modeling
+
 🛠️ Tech Stack & Core Competencies
 Languages: Python (SQL, Bash)
 
