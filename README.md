@@ -1,6 +1,3 @@
-Step 1: Create your file
-Create a file named README.md inside your Saqib's Portfolio folder, paste the entire block below into it, and save it.
-
 Markdown
 # Portfolio: Advanced Data Science & Machine Learning Systems
 
