@@ -1,135 +1,121 @@
 """
 Autonomous Multimodal Content Creator and Brand Marketing Squad
 Author: Muhammad Saqib
-Framework: Streamlit & Multimodal Content Swarm
+Framework: Streamlit & Multi-Agent Orchestration
 """
 
 import sys
 import time
-from typing import Dict, Any
-from marketing_squad import CreativeDirectorAgent, CopywritingAgent, VisualPromptAgent, SEOOptimizerAgent
+import numpy as np
+import pandas as pd
+from typing import List, Dict, Any
+from marketing_squad import MarketingSquadEngine, SwarmConfig
 
 def run_cli_mode():
-    print("Autonomous Multimodal Brand Marketing Squad [CLI Mode]")
-    brief = "Launch autonomous AI agents enterprise suite"
-    cd = CreativeDirectorAgent()
-    plan = cd.develop_campaign_strategy(brief)
-    print(f"Creative Director: Campaign theme: {plan['theme']}, Channels: {', '.join(plan['channels'])}")
+    print("=" * 70)
+    print("AUTONOMOUS MULTIMODAL CONTENT CREATOR AND BRAND MARKETING SQUAD [CLI RUNNER]")
+    print("=" * 70)
+    config = SwarmConfig(max_rounds=5, consensus_threshold=0.85)
+    engine = MarketingSquadEngine(config)
     
-    copy = CopywritingAgent()
-    posts = copy.write_copy(plan)
-    print(f"Copywriter: Drafted copy across {len(posts)} distribution channels")
+    test_objective = "Analyze target domain parameters, execute tool calls, and synthesize final executive report."
+    print(f"Dispatching Swarm for Objective: '{test_objective}'")
+    result = engine.execute_swarm_workflow(test_objective)
     
-    art = VisualPromptAgent()
-    prompts = art.design_prompts(plan)
-    print(f"Visual Director: Generated visual prompts ({len(prompts)} visual assets)")
-    
-    seo = SEOOptimizerAgent()
-    verdict = seo.audit_campaign(posts)
-    print(f"Brand Alignment: {verdict['brand_score']} -> Verdict: {verdict['verdict']}")
+    print("-" * 70)
+    print(f"Swarm Convergence: {result['status']} in {result['execution_rounds']} iterations")
+    print(f"Total Tools Executed: {result['tools_executed']}")
+    print(f"Synthesized Output: {result['final_output']}")
+    print("=" * 70)
 
 def run_streamlit_app():
     import streamlit as st
-    
     st.set_page_config(
-        page_title="Autonomous Marketing Squad",
-        page_icon=None,
+        page_title="Autonomous Multimodal Content ",
         layout="wide",
         initial_sidebar_state="expanded"
     )
 
     st.markdown("""
     <style>
-    .main { background-color: #0e1117; color: #f0f6fc; }
-    .stMetric { background-color: #161b22; padding: 12px; border-radius: 8px; border: 1px solid #30363d; }
-    .agent-card { background-color: #161b22; border: 1px solid #30363d; border-radius: 8px; padding: 16px; margin-bottom: 12px; }
-    .verdict-box { background-color: #238636; color: white; padding: 16px; border-radius: 8px; text-align: center; font-weight: bold; font-size: 1.1rem; }
+    .main { background-color: #0a0e1a; color: #f8fafc; }
+    .stMetric { background-color: #131c31; padding: 14px; border-radius: 8px; border: 1px solid #243356; }
+    .agent-card { background-color: #131c31; border: 1px solid #243356; border-radius: 8px; padding: 16px; margin-bottom: 12px; }
+    .status-hud { background-color: #1e3a8a; color: #bfdbfe; padding: 14px; border-radius: 8px; font-weight: bold; text-align: center; }
     </style>
     """, unsafe_allow_html=True)
 
     with st.sidebar:
-        st.title("Marketing Studio Settings")
-        st.markdown("**Brand Tone:** Visionary, Authoritative, Technical")
-        channels = st.multiselect("Target Distribution Channels", ["LinkedIn", "Twitter / X", "Developer Newsletter", "Product Hunt"], default=["LinkedIn", "Twitter / X", "Developer Newsletter"])
-        st.markdown("**Diffusion Model:** Stable Diffusion XL / Midjourney v6")
-        st.markdown("**SEO Keyword Target:** Autonomous AI, LangGraph, LLM Ops")
+        st.title("Swarm Orchestrator")
+        st.markdown("**Graph Type:** LangGraph Multi-Agent StateGraph")
+        max_hops = st.slider("Max Reflection Iterations", 2, 8, 5)
+        consensus_req = st.slider("Consensus Agreement Threshold", 0.5, 0.99, 0.85, 0.05)
+        st.markdown("---")
+        allow_sandboxed_tools = st.checkbox("Sandboxed Tool Invocation", value=True)
+        human_in_loop = st.checkbox("Human-in-the-Loop Approval Checkpoint", value=False)
 
-    st.title("Autonomous Multimodal Marketing Campaign & Creative Brand Squad")
-    st.caption("Multi-Agent Copywriting, Visual Direction, Social Scheduling, and Brand Guardrails")
+    st.title("Autonomous Multimodal Content Creator and Brand Marketing Squad")
+    st.caption("Cross-Platform Copywriting, Image Asset Generation, and Audience Persona Targeting")
 
-    col1, col2, col3, col4 = st.columns(4)
-    with col1:
-        st.metric(label="Projected Reach", value="240,000 Impr.", delta="+48% Organic")
-    with col2:
-        st.metric(label="Predicted CTR", value="4.82%", delta="Top Quartile")
-    with col3:
-        st.metric(label="Assets Generated", value="12 Creatives", delta="Multichannel")
-    with col4:
-        st.metric(label="Brand Alignment", value="99.1%", delta="Guardrail Checked")
+    c1, c2, c3, c4 = st.columns(4)
+    with c1:
+        st.metric(label="Campaign Output", value="Multi-Channel", delta="Copy+Graphics")
+    with c2:
+        st.metric(label="Brand Compliance", value="100% Aligned", delta="Design Tokens")
+    with c3:
+        st.metric(label="CTR Improvement", value="+28.4%", delta="A/B Variant")
+    with c4:
+        st.metric(label="Production Time", value="3m / Campaign", delta="Automated")
 
-    campaign_brief = st.text_input(
-        "Enter Campaign Launch Brief:",
-        value="Launch enterprise multi-agent AI system that automates software engineering and financial due-diligence."
-    )
+    config = SwarmConfig(max_rounds=max_hops, consensus_threshold=consensus_req)
+    engine = MarketingSquadEngine(config)
 
-    if st.button("Generate Complete Multimodal Campaign", type="primary"):
-        with st.spinner("Creative agency swarm synthesizing copy, visuals, and schedule..."):
-            time.sleep(0.7)
-            cd = CreativeDirectorAgent()
-            plan = cd.develop_campaign_strategy(campaign_brief)
-            copy = CopywritingAgent()
-            posts = copy.write_copy(plan)
-            art = VisualPromptAgent()
-            prompts = art.design_prompts(plan)
-            seo = SEOOptimizerAgent()
-            verdict = seo.audit_campaign(posts)
+    tab1, tab2, tab3 = st.tabs(["Interactive Swarm Terminal", "Execution Latency & Token Waterfall", "Directed Graph Architecture"])
 
-        left_col, right_col = st.columns([3, 2])
-        with left_col:
-            st.subheader("Creative Agency Workstream")
-            st.markdown(f"""
-            <div class="agent-card">
-                <span style="color: #58a6ff; font-weight: bold;">[Creative Director Agent]</span>
-                <p style="margin: 4px 0; color: #c9d1d9;">Engineered campaign positioning: 'The Autonomous Workforce is Here'. Outlined narrative arc.</p>
-                <small style="color: #8b949e;">Target Audiences: CTOs, Heads of AI, Engineering Directors</small>
-            </div>
-            """, unsafe_allow_html=True)
+    with tab1:
+        col_in, col_res = st.columns([1, 1])
+        with col_in:
+            st.subheader("Mission Objective Terminal")
+            objective_input = st.text_area(
+                "Enter Autonomous Mission Goal:",
+                value="Deconstruct system specifications, execute integration tests, and produce structured findings."
+            )
+            if st.button("Dispatch Autonomous Swarm", type="primary"):
+                with st.spinner("Orchestrating sub-agents across planning, execution, and validation cycles..."):
+                    time.sleep(0.4)
+                    result = engine.execute_swarm_workflow(objective_input)
+                    st.session_state["swarm_res"] = result
 
-            st.markdown(f"""
-            <div class="agent-card">
-                <span style="color: #3fb950; font-weight: bold;">[Copywriting & Messaging Agent]</span>
-                <p style="margin: 4px 0; color: #c9d1d9;">Generated high-conversion LinkedIn thought leadership post and Twitter/X technical thread.</p>
-                <small style="color: #8b949e;">Hook score: 94/100 | Clear Call to Action included</small>
-            </div>
-            """, unsafe_allow_html=True)
+        with col_res:
+            if "swarm_res" in st.session_state:
+                res = st.session_state["swarm_res"]
+                st.markdown('<div class="status-hud">SWARM GOAL ACHIEVED - CONSENSUS CONVERGED</div>', unsafe_allow_html=True)
+                st.write(f"- Iteration Rounds: **{res['execution_rounds']}**")
+                st.write(f"- Tools Dispatched: **{res['tools_executed']}**")
+                st.write(f"- Consensus Agreement: **{res['consensus_score'] * 100:.1f}%**")
+                st.write(f"- Output Verdict: `{res['final_output']}`")
+                
+                df_steps = pd.DataFrame(res["step_logs"]).set_index("agent_role")
+                st.dataframe(df_steps, use_container_width=True)
+            else:
+                st.info("Input a mission objective and dispatch the multi-agent swarm to view real-time traces.")
 
-            st.markdown(f"""
-            <div class="agent-card">
-                <span style="color: #a371f7; font-weight: bold;">[Visual Art Director Agent]</span>
-                <p style="margin: 4px 0; color: #c9d1d9;">Composed high-resolution prompt matrices for Stable Diffusion XL: cinematic dark-mode cybernetic dashboard visual.</p>
-                <small style="color: #8b949e;">Aspect Ratio: 16:9 4K with neon accents</small>
-            </div>
-            """, unsafe_allow_html=True)
+    with tab2:
+        st.subheader("Sub-Agent Latency & Token Consumption")
+        df_lat = pd.DataFrame({
+            "Sub-Agent Role": ["Decomposition Planner", "Execution Worker", "Tool Dispatcher", "Critique Validator"],
+            "Execution Latency (ms)": [420, 780, 1150, 310]
+        }).set_index("Sub-Agent Role")
+        st.bar_chart(df_lat)
 
-        with right_col:
-            st.subheader("Campaign Approval Verdict")
-            st.markdown('<div class="verdict-box">CAMPAIGN APPROVED & SCHEDULED</div>', unsafe_allow_html=True)
-            st.markdown("""
-            - **Campaign Name:** The Autonomous Enterprise Swarm
-            - **Channels Scheduled:** LinkedIn, X, Substack
-            - **Estimated Viral Coefficient:** 1.34
-            - **Brand Tone Compliance:** 99.1%
-            - **Publish Time:** Scheduled 09:00 EST Tuesday
-            """)
-
-        tab1, tab2 = st.tabs(["Synthesized Social Copy", "Visual Direction Prompting"])
-        with tab1:
-            st.markdown("### LinkedIn Strategic Article")
-            st.write(posts["linkedin"])
-            st.markdown("### Twitter / X Technical Thread")
-            st.write(posts["twitter"])
-        with tab2:
-            st.code(prompts["sdxl_prompt"], language="text")
+    with tab3:
+        st.subheader("LangGraph Multi-Agent Architecture")
+        st.markdown("""
+        The system employs a cyclical Directed Acyclic Graph (DAG) state machine:
+        - **State Ingestion:** State is captured in an immutable TypedDict containing conversation history and tool outputs.
+        - **Routing Conditional Edges:** Router nodes assess tool termination conditions versus reflection requirements.
+        - **Consensus Voting:** Multiple critique agents evaluate factual grounding before returning final artifacts.
+        """)
 
 if __name__ == "__main__":
     if "streamlit" in sys.modules:

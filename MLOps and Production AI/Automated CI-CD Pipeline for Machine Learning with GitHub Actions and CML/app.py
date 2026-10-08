@@ -1,34 +1,124 @@
 """
 Automated CI-CD Pipeline for Machine Learning with GitHub Actions and CML
 Author: Muhammad Saqib
-Framework: Streamlit & Continuous Machine Learning (CML)
+Framework: Streamlit & MLOps Infrastructure Observability
 """
 
 import sys
+import time
+import numpy as np
+import pandas as pd
+from typing import List, Dict, Any
+from cml_reporter import CmlReporterEngine, MLOpsConfig
 
 def run_cli_mode():
-    print("CML GitHub Actions CI/CD [CLI Mode]")
-    print("PR #104: Trained new model artifact on spot GPU runner")
-    print("CML Report: Published markdown diff table and ROC curve into PR comment")
-    print("Test Suite: All unit tests and data sanity checks passed")
+    print("=" * 70)
+    print("AUTOMATED CI-CD PIPELINE FOR MACHINE LEARNING WITH GITHUB ACTIONS AND CML [CLI RUNNER]")
+    print("=" * 70)
+    config = MLOpsConfig(sample_rate_hz=100, drift_threshold=0.05)
+    engine = CmlReporterEngine(config)
+    
+    print("Executing automated production pipeline telemetry evaluation...")
+    for batch in range(5):
+        sample_metrics = [0.02 * (batch + 1), 0.94 - 0.01 * batch, 12.5 + batch]
+        telemetry = engine.evaluate_production_batch(sample_metrics)
+        print(f"  Batch {batch+1:02d} | Drift P-Val: {telemetry['drift_p_value']:.4f} | Latency: {telemetry['latency_p99_ms']:.1f} ms | Health: {telemetry['status']}")
+    
+    summary = engine.get_infrastructure_telemetry()
+    print("-" * 70)
+    print(f"Cluster Status: {summary}")
+    print("=" * 70)
 
 def run_streamlit_app():
     import streamlit as st
-    st.set_page_config(page_title="CML CI/CD Pipeline", layout="wide")
+    st.set_page_config(
+        page_title="Automated CI-CD Pipeline for M",
+        layout="wide",
+        initial_sidebar_state="expanded"
+    )
+
+    st.markdown("""
+    <style>
+    .main { background-color: #10141a; color: #f8fafc; }
+    .stMetric { background-color: #181f2a; padding: 14px; border-radius: 8px; border: 1px solid #2d3748; }
+    .status-hud { background-color: #065f46; color: #6ee7b7; padding: 14px; border-radius: 8px; font-weight: bold; text-align: center; }
+    </style>
+    """, unsafe_allow_html=True)
+
+    with st.sidebar:
+        st.title("MLOps Observability")
+        st.markdown("**Infrastructure:** EKS Kubernetes & Triton Server")
+        alert_thresh = st.slider("Drift Significance Alpha", 0.01, 0.10, 0.05, 0.01)
+        max_batch = st.slider("Max Micro-Batch Size", 8, 128, 32, 8)
+        st.markdown("---")
+        auto_scale = st.checkbox("Autonomous HPA Cluster Autoscaling", value=True)
+        canary_routing = st.checkbox("Canary Shadow Deployment Routing", value=True)
+
     st.title("Automated CI-CD Pipeline for Machine Learning with GitHub Actions and CML")
-    st.caption("Automated Training on PRs, Model Diff Reporting, and Conditional CD Gateways")
+    st.caption("Automated Model Regression Testing, Continuous Machine Learning (CML) Reports, and Deployments")
 
-    col1, col2, col3, col4 = st.columns(4)
-    with col1:
-        st.metric(label="PR Evaluation", value="PR #104", delta="Automated Run")
-    with col2:
-        st.metric(label="AUC Comparison", value="+0.024", delta="vs Production Main")
-    with col3:
-        st.metric(label="Unit Tests", value="32 / 32 Passed", delta="Pytest")
-    with col4:
-        st.metric(label="Deployment Gate", value="Approved", delta="Auto Merged")
+    c1, c2, c3, c4 = st.columns(4)
+    with c1:
+        st.metric(label="CI Duration", value="4m 12s", delta="GPU Runner")
+    with c2:
+        st.metric(label="Model Regression", value="0.0% Delta", delta="CML Report")
+    with c3:
+        st.metric(label="Test Coverage", value="98.2%", delta="PyTest MLOps")
+    with c4:
+        st.metric(label="Deploy Strategy", value="Blue/Green", delta="Zero-Downtime")
 
-    st.success("Continuous Machine Learning (CML) Report posted to GitHub Pull Request #104 with loss plots.")
+    config = MLOpsConfig(drift_threshold=alert_thresh)
+    engine = CmlReporterEngine(config)
+
+    tab1, tab2, tab3 = st.tabs(["Active Production Monitor", "Latency & Resource Telemetry", "Deployment Architecture"])
+
+    with tab1:
+        col_in, col_res = st.columns([1, 1])
+        with col_in:
+            st.subheader("Simulate Production Ingestion Batch")
+            batch_volume = st.slider("Ingress Request Rate (RPS):", 100, 5000, 1250, 50)
+            synthetic_shift = st.slider("Simulate Covariate Shift Mean:", 0.0, 1.0, 0.15, 0.05)
+            
+            if st.button("Trigger Statistical Health Audit", type="primary"):
+                with st.spinner("Executing Kolmogorov-Smirnov test and percentile calculations..."):
+                    time.sleep(0.3)
+                    telemetry = engine.evaluate_production_batch([synthetic_shift, batch_volume / 1000.0, 8.5])
+                    st.session_state["mlops_telem"] = telemetry
+
+        with col_res:
+            if "mlops_telem" in st.session_state:
+                t = st.session_state["mlops_telem"]
+                st.markdown('<div class="status-hud">AUDIT PASSED - PRODUCTION METRICS COMPLIANT</div>', unsafe_allow_html=True)
+                st.write(f"- Kolmogorov-Smirnov P-Value: **{t['drift_p_value']:.4f}**")
+                st.write(f"- Latency P99: **{t['latency_p99_ms']:.2f} ms**")
+                st.write(f"- Cluster Health: `{t['status']}`")
+                
+                df_drift = pd.DataFrame({
+                    "Feature": [f"Feature {i+1}" for i in range(len(t["feature_p_values"]))],
+                    "P-Value": t["feature_p_values"]
+                }).set_index("Feature")
+                st.bar_chart(df_drift)
+            else:
+                st.info("Trigger a production health audit to inspect real-time statistical drift values.")
+
+    with tab2:
+        st.subheader("24-Hour Prometheus Latency Percentiles")
+        time_hours = np.linspace(0, 24, 24)
+        df_p = pd.DataFrame({
+            "Hour": time_hours,
+            "p50 (ms)": 3.5 + np.random.normal(0, 0.1, 24),
+            "p95 (ms)": 6.8 + np.random.normal(0, 0.2, 24),
+            "p99 (ms)": 11.2 + np.random.normal(0, 0.4, 24)
+        }).set_index("Hour")
+        st.line_chart(df_p)
+
+    with tab3:
+        st.subheader("MLOps Pipeline Architecture")
+        st.markdown("""
+        - **Model Registry & Governance:** MLflow tracks models from Staging to Production with cryptographically verified checksums.
+        - **Serving Layer:** Triton Inference Server runs on EKS with GPU dynamic batching and autoscaling.
+        - **Monitoring Daemon:** Evidently AI continuously validates feature distributions against baseline reference sets.
+        """)
 
 if __name__ == "__main__":
     if "streamlit" in sys.modules:

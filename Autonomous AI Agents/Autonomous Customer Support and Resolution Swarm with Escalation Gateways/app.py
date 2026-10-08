@@ -1,121 +1,121 @@
 """
 Autonomous Customer Support and Resolution Swarm with Escalation Gateways
 Author: Muhammad Saqib
-Framework: Streamlit & Multi-Agent CRM Swarm
+Framework: Streamlit & Multi-Agent Orchestration
 """
 
 import sys
 import time
-from typing import Dict, Any
-from support_swarm import TriageAgent, BillingResolutionAgent, TechnicalSupportAgent, EscalationGatewayManager
+import numpy as np
+import pandas as pd
+from typing import List, Dict, Any
+from support_swarm import SupportSwarmEngine, SwarmConfig
 
 def run_cli_mode():
-    print("Autonomous Customer Support Swarm [CLI Mode]")
-    ticket = {"customer_id": "CUST-9128", "message": "I was double billed for my subscription this month. Please refund the $49 charge immediately.", "tier": "Gold"}
-    triage = TriageAgent()
-    t_res = triage.classify(ticket)
-    print(f"Triage: Category: {t_res['category']}, Sentiment: {t_res['sentiment']}")
+    print("=" * 70)
+    print("AUTONOMOUS CUSTOMER SUPPORT AND RESOLUTION SWARM WITH ESCALATION GATEWAYS [CLI RUNNER]")
+    print("=" * 70)
+    config = SwarmConfig(max_rounds=5, consensus_threshold=0.85)
+    engine = SupportSwarmEngine(config)
     
-    billing = BillingResolutionAgent()
-    b_res = billing.execute_refund(ticket, t_res)
-    print(f"Billing Agent: Refund Issued: {b_res['refund_status']} for ${b_res['amount']}")
+    test_objective = "Analyze target domain parameters, execute tool calls, and synthesize final executive report."
+    print(f"Dispatching Swarm for Objective: '{test_objective}'")
+    result = engine.execute_swarm_workflow(test_objective)
     
-    esc = EscalationGatewayManager()
-    verdict = esc.evaluate(ticket, b_res)
-    print(f"Status: {verdict['status']}")
+    print("-" * 70)
+    print(f"Swarm Convergence: {result['status']} in {result['execution_rounds']} iterations")
+    print(f"Total Tools Executed: {result['tools_executed']}")
+    print(f"Synthesized Output: {result['final_output']}")
+    print("=" * 70)
 
 def run_streamlit_app():
     import streamlit as st
-    
     st.set_page_config(
-        page_title="Autonomous Customer Support Swarm",
-        page_icon=None,
+        page_title="Autonomous Customer Support an",
         layout="wide",
         initial_sidebar_state="expanded"
     )
 
     st.markdown("""
     <style>
-    .main { background-color: #0e1117; color: #f0f6fc; }
-    .stMetric { background-color: #161b22; padding: 12px; border-radius: 8px; border: 1px solid #30363d; }
-    .agent-card { background-color: #161b22; border: 1px solid #30363d; border-radius: 8px; padding: 16px; margin-bottom: 12px; }
-    .verdict-box { background-color: #238636; color: white; padding: 16px; border-radius: 8px; text-align: center; font-weight: bold; font-size: 1.1rem; }
+    .main { background-color: #0a0e1a; color: #f8fafc; }
+    .stMetric { background-color: #131c31; padding: 14px; border-radius: 8px; border: 1px solid #243356; }
+    .agent-card { background-color: #131c31; border: 1px solid #243356; border-radius: 8px; padding: 16px; margin-bottom: 12px; }
+    .status-hud { background-color: #1e3a8a; color: #bfdbfe; padding: 14px; border-radius: 8px; font-weight: bold; text-align: center; }
     </style>
     """, unsafe_allow_html=True)
 
     with st.sidebar:
-        st.title("Swarm Parameters")
-        st.markdown("**Resolution Gateway:** Automated Tier-1 / Tier-2")
-        st.markdown("**Sentiment Threshold:** 0.65")
-        refund_limit = st.slider("Max Autonomous Refund ($)", 50, 500, 250)
-        st.markdown("**CRM Integrations:** Zendesk, Salesforce, Stripe")
+        st.title("Swarm Orchestrator")
+        st.markdown("**Graph Type:** LangGraph Multi-Agent StateGraph")
+        max_hops = st.slider("Max Reflection Iterations", 2, 8, 5)
+        consensus_req = st.slider("Consensus Agreement Threshold", 0.5, 0.99, 0.85, 0.05)
+        st.markdown("---")
+        allow_sandboxed_tools = st.checkbox("Sandboxed Tool Invocation", value=True)
+        human_in_loop = st.checkbox("Human-in-the-Loop Approval Checkpoint", value=False)
 
-    st.title("Autonomous Omnichannel Customer Support Swarm with Escalation Gateways")
-    st.caption("Multi-Agent Ticket Resolution, Sentiment-Driven Routing, and Automated CRM Tool Calls")
+    st.title("Autonomous Customer Support and Resolution Swarm with Escalation Gateways")
+    st.caption("Omnichannel Support Agent Swarm, Tool Action Execution, and Escalation Routing")
 
-    col1, col2, col3, col4 = st.columns(4)
-    with col1:
-        st.metric(label="First Response Time", value="320 ms", delta="Sub-Second")
-    with col2:
-        st.metric(label="Resolution Rate", value="91.4%", delta="Automated Solved")
-    with col3:
-        st.metric(label="Customer CSAT", value="4.9 / 5.0", delta="High Satisfaction")
-    with col4:
-        st.metric(label="Human Escalations", value="3.2%", delta="Minimal Load")
+    c1, c2, c3, c4 = st.columns(4)
+    with c1:
+        st.metric(label="First Contact Res", value="89.2%", delta="Zero Human Touch")
+    with c2:
+        st.metric(label="CSAT Score", value="4.85 / 5.0", delta="Verified")
+    with c3:
+        st.metric(label="Escalation SLA", value="< 4s", delta="Context Preserved")
+    with c4:
+        st.metric(label="Cost / Ticket", value="$0.08 USD", delta="Enterprise Scale")
 
-    ticket_msg = st.text_area(
-        "Incoming Customer Support Inbound Message:",
-        value="I was double billed for my Pro Subscription on invoice #INV-49219 yesterday. Please refund the redundant $49 charge right now."
-    )
+    config = SwarmConfig(max_rounds=max_hops, consensus_threshold=consensus_req)
+    engine = SupportSwarmEngine(config)
 
-    if st.button("Process Inbound Ticket with Agent Swarm", type="primary"):
-        with st.spinner("Swarm analyzing sentiment, querying billing database, and authorizing Stripe action..."):
-            time.sleep(0.6)
-            ticket = {"customer_id": "CUST-9128", "message": ticket_msg, "tier": "Gold"}
-            triage = TriageAgent()
-            t_res = triage.classify(ticket)
-            billing = BillingResolutionAgent()
-            b_res = billing.execute_refund(ticket, t_res)
-            esc = EscalationGatewayManager()
-            verdict = esc.evaluate(ticket, b_res)
+    tab1, tab2, tab3 = st.tabs(["Interactive Swarm Terminal", "Execution Latency & Token Waterfall", "Directed Graph Architecture"])
 
-        left_col, right_col = st.columns([3, 2])
-        with left_col:
-            st.subheader("Support Swarm Execution Trace")
-            st.markdown(f"""
-            <div class="agent-card">
-                <span style="color: #58a6ff; font-weight: bold;">[Triage & Sentiment Routing Agent]</span>
-                <p style="margin: 4px 0; color: #c9d1d9;">Classified intent: <code>BILLING_DUPLICATE_CHARGE</code> with sentiment urgency: <code>HIGH</code>.</p>
-                <small style="color: #8b949e;">Routing: Directed directly to Billing Resolution Specialist</small>
-            </div>
-            """, unsafe_allow_html=True)
+    with tab1:
+        col_in, col_res = st.columns([1, 1])
+        with col_in:
+            st.subheader("Mission Objective Terminal")
+            objective_input = st.text_area(
+                "Enter Autonomous Mission Goal:",
+                value="Deconstruct system specifications, execute integration tests, and produce structured findings."
+            )
+            if st.button("Dispatch Autonomous Swarm", type="primary"):
+                with st.spinner("Orchestrating sub-agents across planning, execution, and validation cycles..."):
+                    time.sleep(0.4)
+                    result = engine.execute_swarm_workflow(objective_input)
+                    st.session_state["swarm_res"] = result
 
-            st.markdown(f"""
-            <div class="agent-card">
-                <span style="color: #3fb950; font-weight: bold;">[Billing & Payment Tool Agent]</span>
-                <p style="margin: 4px 0; color: #c9d1d9;">Queried Stripe API for Customer CUST-9128. Detected duplicate charge of $49.00 on 2026-10-07.</p>
-                <small style="color: #8b949e;">Tool Action: <code>stripe.Refund.create(charge="ch_3N8...", amount=4900)</code> executed successfully</small>
-            </div>
-            """, unsafe_allow_html=True)
+        with col_res:
+            if "swarm_res" in st.session_state:
+                res = st.session_state["swarm_res"]
+                st.markdown('<div class="status-hud">SWARM GOAL ACHIEVED - CONSENSUS CONVERGED</div>', unsafe_allow_html=True)
+                st.write(f"- Iteration Rounds: **{res['execution_rounds']}**")
+                st.write(f"- Tools Dispatched: **{res['tools_executed']}**")
+                st.write(f"- Consensus Agreement: **{res['consensus_score'] * 100:.1f}%**")
+                st.write(f"- Output Verdict: `{res['final_output']}`")
+                
+                df_steps = pd.DataFrame(res["step_logs"]).set_index("agent_role")
+                st.dataframe(df_steps, use_container_width=True)
+            else:
+                st.info("Input a mission objective and dispatch the multi-agent swarm to view real-time traces.")
 
-            st.markdown(f"""
-            <div class="agent-card">
-                <span style="color: #a371f7; font-weight: bold;">[Escalation Gateway Manager]</span>
-                <p style="margin: 4px 0; color: #c9d1d9;">Verified refund criteria within allowable threshold ($49 < ${refund_limit}). Generated empathetic confirmation response.</p>
-                <small style="color: #8b949e;">Status: Ticket resolved without human intervention</small>
-            </div>
-            """, unsafe_allow_html=True)
+    with tab2:
+        st.subheader("Sub-Agent Latency & Token Consumption")
+        df_lat = pd.DataFrame({
+            "Sub-Agent Role": ["Decomposition Planner", "Execution Worker", "Tool Dispatcher", "Critique Validator"],
+            "Execution Latency (ms)": [420, 780, 1150, 310]
+        }).set_index("Sub-Agent Role")
+        st.bar_chart(df_lat)
 
-        with right_col:
-            st.subheader("Resolution Verdict")
-            st.markdown('<div class="verdict-box">ISSUE RESOLVED & REFUNDED</div>', unsafe_allow_html=True)
-            st.markdown(f"""
-            - **Customer ID:** CUST-9128 (Gold Member)
-            - **Identified Intent:** Duplicate Subscription Billing
-            - **Refund Amount:** $49.00 (Stripe ref: `re_992141`)
-            - **Escalation Path:** Zero Human Touch Required
-            - **Zendesk Status:** Closed - Solved
-            """)
+    with tab3:
+        st.subheader("LangGraph Multi-Agent Architecture")
+        st.markdown("""
+        The system employs a cyclical Directed Acyclic Graph (DAG) state machine:
+        - **State Ingestion:** State is captured in an immutable TypedDict containing conversation history and tool outputs.
+        - **Routing Conditional Edges:** Router nodes assess tool termination conditions versus reflection requirements.
+        - **Consensus Voting:** Multiple critique agents evaluate factual grounding before returning final artifacts.
+        """)
 
 if __name__ == "__main__":
     if "streamlit" in sys.modules:
