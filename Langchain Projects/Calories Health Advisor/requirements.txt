@@ -1,8 +1,7 @@
-streamlit
-google-generativeai
-python-dotenv
-langchain
-PyPDF2
-chromadb
-faiss-cpu
-pdf2image
+streamlit>=1.38.0
+numpy>=1.26.0
+pandas>=2.2.0
+scipy>=1.13.0
+scikit-learn>=1.5.0
+matplotlib>=3.9.0
+pytest>=8.0.0
