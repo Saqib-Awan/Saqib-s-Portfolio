@@ -2,15 +2,19 @@
 
 **Author:** Saqib  
 
+## Visual Interface
+
+![Application Interface](assets/screenshot.png)
+
 ## Overview
 This project implements a **Text‑to‑SQL** system using Groq's Llama 3.3 70B model. Users ask questions in plain English about a sample sales database, and the LLM generates a SQL query, executes it, and returns a natural language answer.
 
 ## Features
-- 🔍 **Natural language interface** – Ask questions like “What is the total revenue?”
-- 🧠 **LLM‑generated SQL** – Uses chain‑of‑thought‑style prompting for accuracy.
-- 🗄️ **SQLite execution** – Runs queries against a real in‑memory database.
-- 📊 **Result summarisation** – Converts tabular results into plain English.
-- 🖥️ **Interactive loop** – Test your own questions.
+-  **Natural language interface** – Ask questions like “What is the total revenue?”
+-  **LLM‑generated SQL** – Uses chain‑of‑thought‑style prompting for accuracy.
+- ️ **SQLite execution** – Runs queries against a real in‑memory database.
+-  **Result summarisation** – Converts tabular results into plain English.
+- ️ **Interactive loop** – Test your own questions.
 
 ## How It Works
 1. User question → Llama generates a SQL query.
@@ -31,13 +35,13 @@ This project implements a **Text‑to‑SQL** system using Groq's Llama 3.3 70B 
 
 ## Example Interaction
 
-❓ Question: What is the total revenue from all sales?  
-📝 Generated SQL: `SELECT SUM(quantity * price) FROM sales;`  
-✅ Answer: The total revenue from all sales is $4672.89.
+ Question: What is the total revenue from all sales?  
+ Generated SQL: `SELECT SUM(quantity * price) FROM sales;`  
+ Answer: The total revenue from all sales is $4672.89.
 
-❓ Question: Which product had the highest quantity sold?  
-📝 Generated SQL: `SELECT product, MAX(quantity) FROM sales;`  
-✅ Answer: The product with the highest quantity sold is Notebook with 10 units.
+ Question: Which product had the highest quantity sold?  
+ Generated SQL: `SELECT product, MAX(quantity) FROM sales;`  
+ Answer: The product with the highest quantity sold is Notebook with 10 units.
 
 ## Extending the Project
 - Replace the sample database with your own schema (just change the `CREATE TABLE` and `INSERT` statements).

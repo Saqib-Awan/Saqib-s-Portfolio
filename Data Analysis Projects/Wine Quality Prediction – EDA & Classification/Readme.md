@@ -2,6 +2,10 @@
 
 **Author:** Saqib   
 
+## Visual Interface
+
+![Application Interface](assets/screenshot.png)
+
 ## Overview
 
 This project analyses physicochemical properties of red and white wine to predict quality scores. Using random forest classification, it identifies which chemical features (alcohol, volatile acidity, sulphates) most influence perceived quality. The insights help winemakers focus on key attributes.

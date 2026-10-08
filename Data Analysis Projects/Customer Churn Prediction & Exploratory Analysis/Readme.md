@@ -2,6 +2,10 @@
 
 **Author:** Saqib  
 
+## Visual Interface
+
+![Application Interface](assets/screenshot.png)
+
 ## Overview
 
 This project analyses customer churn for a telecommunications company. It uses the IBM Telco Customer Churn dataset to identify key factors leading to churn (e.g., contract type, monthly charges, payment method) and builds a logistic regression model to predict churn. The notebook contains 10 professional visualisations and a complete machine learning pipeline.

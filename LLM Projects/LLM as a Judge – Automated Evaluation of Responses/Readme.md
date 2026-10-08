@@ -2,6 +2,10 @@
 
 **Author:** Saqib   
 
+## Visual Interface
+
+![Application Interface](assets/screenshot.png)
+
 ## Overview
 
 This project implements an **LLM‑as‑a‑judge** system using Groq’s Llama 3.3 70B. Given a question, a reference (ground truth) answer, and a candidate answer, the judge outputs numerical scores (1–5) for correctness, relevance, clarity, and conciseness, plus a short explanation. This technique is used in modern LLM evaluation frameworks like AlpacaEval and RAGAS.
@@ -9,9 +13,9 @@ This project implements an **LLM‑as‑a‑judge** system using Groq’s Llama 
 ## Features
 
 - ⚖️ **Multi‑criteria scoring** – Four dimensions of quality.
-- 📝 **Structured JSON output** – Easy to parse and store.
-- 🔄 **Batch evaluation** – Score multiple test cases at once.
-- 💻 **Interactive** – Judge any candidate answer you provide.
+-  **Structured JSON output** – Easy to parse and store.
+-  **Batch evaluation** – Score multiple test cases at once.
+-  **Interactive** – Judge any candidate answer you provide.
 
 ## How It Works
 

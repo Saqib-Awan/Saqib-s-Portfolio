@@ -2,6 +2,10 @@
 
 **Author:** Saqib   
 
+## Visual Interface
+
+![Application Interface](assets/screenshot.png)
+
 ## Overview
 
 This project analyses customer transaction data from an e‑commerce store. It uses **RFM (Recency, Frequency, Monetary) analysis** to segment customers into groups (e.g., Champions, Loyal, At‑Risk) and estimates Customer Lifetime Value (CLV). The insights help prioritise marketing efforts and improve retention.

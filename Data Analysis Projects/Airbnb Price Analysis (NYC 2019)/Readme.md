@@ -2,6 +2,10 @@
 
 **Author:** Saqib  
 
+## Visual Interface
+
+![Application Interface](assets/screenshot.png)
+
 ## Overview
 
 This project analyses the New York City Airbnb market using the 2019 public dataset. It examines how listing prices vary by neighbourhood, room type, availability, and review count. The insights help hosts set competitive prices and travellers find good deals.

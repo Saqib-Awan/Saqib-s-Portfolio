@@ -2,6 +2,10 @@
 
 **Author:** Saqib   
 
+## Visual Interface
+
+![Application Interface](assets/screenshot.png)
+
 ## Overview
 
 This project analyses a Portuguese bank's direct marketing campaigns (phone calls) to predict whether a client will subscribe to a term deposit. It uses demographic, campaign, and economic data to identify factors that drive conversions. The insights help optimise targeting, reduce call costs, and improve ROI.

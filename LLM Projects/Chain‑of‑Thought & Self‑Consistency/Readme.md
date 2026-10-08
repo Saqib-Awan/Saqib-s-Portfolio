@@ -2,6 +2,10 @@
 
 **Author:** Saqib  
 
+## Visual Interface
+
+![Application Interface](assets/screenshot.png)
+
 ## Overview
 
 This project implements two advanced LLM reasoning techniques:
@@ -12,10 +16,10 @@ These methods dramatically improve performance on arithmetic, logic puzzles, and
 
 ## Features
 
-- 🧠 **CoT prompting** – Explicit reasoning traces.
-- 🔁 **Self‑consistency** – 5–10 samples + majority voting.
-- 📊 **Evaluation** – Compare direct, CoT, and self‑consistency accuracy.
-- 📈 **Visualisation** – Accuracy bar chart automatically saved.
+-  **CoT prompting** – Explicit reasoning traces.
+-  **Self‑consistency** – 5–10 samples + majority voting.
+-  **Evaluation** – Compare direct, CoT, and self‑consistency accuracy.
+-  **Visualisation** – Accuracy bar chart automatically saved.
 
 ## Architecture
 

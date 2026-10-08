@@ -2,17 +2,21 @@
 
 **Author:** Saqib  
 
+## Visual Interface
+
+![Application Interface](assets/screenshot.png)
+
 ## Overview
 
 This project fine‑tunes a small, efficient instruction‑tuned language model – **FLAN‑T5‑Small** – on a subset of the Databricks Dolly 15k dataset. The goal is to demonstrate the end‑to‑end fine‑tuning pipeline: loading data, tokenising, training, saving, and inference. Despite the model’s modest size, the notebook proves the ability to adapt a general‑purpose LLM to follow instructions.
 
 ## Features
 
-- 🔧 **Complete fine‑tuning pipeline** using Hugging Face `Trainer`.
-- 📚 **Dataset** – 500 instruction‑response pairs from Dolly 15k.
-- 🧠 **Base model** – `google/flan-t5-small` (248M parameters, runs comfortably on Colab).
-- 💾 **Model saving** – Export fine‑tuned weights and tokenizer.
-- 🧪 **Inference demo** – Test the trained model on custom prompts.
+-  **Complete fine‑tuning pipeline** using Hugging Face `Trainer`.
+-  **Dataset** – 500 instruction‑response pairs from Dolly 15k.
+-  **Base model** – `google/flan-t5-small` (248M parameters, runs comfortably on Colab).
+-  **Model saving** – Export fine‑tuned weights and tokenizer.
+-  **Inference demo** – Test the trained model on custom prompts.
 
 ## Architecture
 

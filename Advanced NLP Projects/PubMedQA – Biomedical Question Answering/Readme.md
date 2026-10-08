@@ -2,18 +2,22 @@
 
 **Author:** Saqib  
 
+## Visual Interface
+
+![Application Interface](assets/screenshot.png)
+
 ## Overview
 
 This notebook implements a **biomedical question‑answering system** that answers clinical questions based on PubMed abstracts. Using a fine‑tuned BERT model, it classifies the question + abstract pair into **YES**, **NO**, or **MAYBE** – a task from the PubMedQA benchmark. This demonstrates how domain‑specific language models can support evidence‑based medicine and clinical decision support.
 
 ## Features
 
-- 🩺 **Biomedical domain** – Trained on real PubMed question‑abstract pairs.
-- 🎯 **3‑way classification** – YES / NO / MAYBE.
-- 🧠 **Fine‑tuned BERT** – Uses `bert-base-uncased` with a classification head.
-- 📚 **Dataset** – `bigbio/pubmed_qa` (Hugging Face).
-- 📊 **Evaluation** – Accuracy, classification report (precision/recall/F1), confusion matrix.
-- 💾 **Model export** – Save fine‑tuned model and tokenizer for inference.
+-  **Biomedical domain** – Trained on real PubMed question‑abstract pairs.
+-  **3‑way classification** – YES / NO / MAYBE.
+-  **Fine‑tuned BERT** – Uses `bert-base-uncased` with a classification head.
+-  **Dataset** – `bigbio/pubmed_qa` (Hugging Face).
+-  **Evaluation** – Accuracy, classification report (precision/recall/F1), confusion matrix.
+-  **Model export** – Save fine‑tuned model and tokenizer for inference.
 
 ## Dataset
 

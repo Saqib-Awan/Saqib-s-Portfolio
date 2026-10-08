@@ -2,6 +2,10 @@
 
 **Author:** Saqib  
 
+## Visual Interface
+
+![Application Interface](assets/screenshot.png)
+
 ## Overview
 
 This project analyses customer shopping behaviour to uncover spending patterns, category preferences, seasonal trends, and the impact of discounts and subscriptions. The insights help retailers personalise offers, optimise promotions, and improve customer retention.

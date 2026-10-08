@@ -2,19 +2,23 @@
 
 **Author:** Saqib  
 
+## Visual Interface
+
+![Application Interface](assets/screenshot.png)
+
 ## Overview
 
 This project builds a **sentiment classification system** for financial news headlines. Given a news headline about a company, stock, or economic event, the model predicts whether the sentiment is **positive**, **negative**, or **neutral**. This is a critical tool for algorithmic trading, market analysis, and risk management. The system uses traditional NLP (TF‑IDF) and machine learning (Logistic Regression, Random Forest) to achieve high accuracy on financial text data.
 
 ## Features
 
-- 📊 **Multi‑class classification** – Positive, Negative, Neutral.
-- 📰 **Financial domain focus** – Trained on real‑world financial news headlines.
-- 🔍 **TF‑IDF vectorisation** – Converts text to numerical features (unigrams + bigrams).
-- 🤖 **Multiple classifiers** – Logistic Regression, Random Forest, and XGBoost (optional).
-- 📈 **Professional evaluation** – Accuracy, precision, recall, F1‑score, confusion matrix.
-- 📉 **Visualisations** – Confusion matrix heatmap, class distribution bar chart, top features per class.
-- 💾 **Model export** – Save the best model and vectorizer for deployment.
+-  **Multi‑class classification** – Positive, Negative, Neutral.
+-  **Financial domain focus** – Trained on real‑world financial news headlines.
+-  **TF‑IDF vectorisation** – Converts text to numerical features (unigrams + bigrams).
+-  **Multiple classifiers** – Logistic Regression, Random Forest, and XGBoost (optional).
+-  **Professional evaluation** – Accuracy, precision, recall, F1‑score, confusion matrix.
+-  **Visualisations** – Confusion matrix heatmap, class distribution bar chart, top features per class.
+-  **Model export** – Save the best model and vectorizer for deployment.
 
 ## Dataset
 

@@ -2,6 +2,10 @@
 
 **Author:** Saqib  
 
+## Visual Interface
+
+![Application Interface](assets/screenshot.png)
+
 ## Overview
 
 This notebook implements a **systematic evaluation framework** for Retrieval‑Augmented Generation (RAG) systems. It measures the quality of both retrieval and generation using four key metrics:
@@ -15,11 +19,11 @@ The evaluation can run using the **RAGAS** library (with OpenAI or Groq as the j
 
 ## Features
 
-- 📊 **Four core metrics** – Quantify RAG quality from multiple angles.
-- 🔁 **Two evaluation backends** – RAGAS (if compatible) or custom Groq LLM‑as‑a‑judge.
-- 📝 **Per‑question scoring** – Detailed breakdown for diagnostic insights.
-- 📈 **Visualisation** – Bar chart of average metric scores.
-- 💾 **Export results** – Save per‑question scores to CSV.
+-  **Four core metrics** – Quantify RAG quality from multiple angles.
+-  **Two evaluation backends** – RAGAS (if compatible) or custom Groq LLM‑as‑a‑judge.
+-  **Per‑question scoring** – Detailed breakdown for diagnostic insights.
+-  **Visualisation** – Bar chart of average metric scores.
+-  **Export results** – Save per‑question scores to CSV.
 - ⚡ **Groq‑friendly** – Custom evaluation works perfectly with Groq’s free tier.
 
 ## Architecture

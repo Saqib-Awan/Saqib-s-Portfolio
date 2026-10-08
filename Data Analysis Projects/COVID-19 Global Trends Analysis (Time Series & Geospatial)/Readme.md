@@ -2,6 +2,10 @@
 
 **Author:** Saqib   
 
+## Visual Interface
+
+![Application Interface](assets/screenshot.png)
+
 ## Overview
 
 This project analyses global COVID-19 pandemic data using the Our World in Data dataset. It covers daily cases, deaths, mortality rates, per‑capita metrics, and regional trends across continents. The notebook produces 10 professional visualisations, including time series, bar charts, heatmaps, stacked area charts, and an interactive choropleth map.

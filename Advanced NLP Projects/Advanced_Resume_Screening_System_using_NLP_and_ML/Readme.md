@@ -2,6 +2,10 @@
 
 **Author:** Saqib   
 
+## Visual Interface
+
+![Application Interface](assets/screenshot.png)
+
 ## Overview
 
 This project builds an **intelligent resume screening system** that automatically classifies resumes into job categories (e.g., Data Scientist, Software Engineer, HR, Marketing, etc.). Using natural language processing and machine learning, the system extracts relevant features from unstructured resume text and predicts the most suitable job role. This helps HR teams filter large volumes of applications efficiently.
@@ -10,13 +14,13 @@ The project uses the **UpdatedResumeDataSet** – a curated collection of resume
 
 ## Features
 
-- 📄 **Resume parsing** – Extracts text from PDF, DOC, DOCX, and TXT formats.
-- 🧹 **Text preprocessing** – Removes emails, URLs, digits, stopwords, and performs lemmatization.
-- 🔍 **TF‑IDF vectorisation** – Converts text into numerical features.
-- 🤖 **Multi‑class classification** – Predicts one of 20+ job categories.
-- 📊 **Model comparison** – Evaluates Logistic Regression, Random Forest, SVM, and XGBoost.
-- 📈 **Visualisations** – Word clouds per category, confusion matrix, top features per class.
-- 💾 **Model export** – Save the best model and vectorizer for deployment.
+-  **Resume parsing** – Extracts text from PDF, DOC, DOCX, and TXT formats.
+-  **Text preprocessing** – Removes emails, URLs, digits, stopwords, and performs lemmatization.
+-  **TF‑IDF vectorisation** – Converts text into numerical features.
+-  **Multi‑class classification** – Predicts one of 20+ job categories.
+-  **Model comparison** – Evaluates Logistic Regression, Random Forest, SVM, and XGBoost.
+-  **Visualisations** – Word clouds per category, confusion matrix, top features per class.
+-  **Model export** – Save the best model and vectorizer for deployment.
 
 ## Dataset
 

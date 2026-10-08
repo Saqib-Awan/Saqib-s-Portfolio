@@ -2,6 +2,10 @@
 
 **Author:** Saqib  
 
+## Visual Interface
+
+![Application Interface](assets/screenshot.png)
+
 ## Overview
 
 This project builds a **binary text classifier** that distinguishes between human‑written text and AI‑generated text (e.g., from GPT models, ChatGPT, or other LLMs). Using advanced NLP techniques including TF‑IDF with character n‑grams, stylometric features, and a fine‑tuned transformer model (BERT, RoBERTa, or DistilBERT), it achieves high accuracy on a diverse dataset of AI vs human examples.
@@ -10,12 +14,12 @@ The project uses the **ai_vs_human_text** dataset – a balanced collection of h
 
 ## Features
 
-- 🧠 **Dual approach** – Classical ML (TF‑IDF + Logistic Regression) and fine‑tuned BERT.
-- 🔍 **Stylometric features** – Includes punctuation, sentence length, word diversity, perplexity, and character n‑grams.
+-  **Dual approach** – Classical ML (TF‑IDF + Logistic Regression) and fine‑tuned BERT.
+-  **Stylometric features** – Includes punctuation, sentence length, word diversity, perplexity, and character n‑grams.
 - ⚖️ **Balanced dataset** – Equal number of human and AI samples (typically 10,000+ each).
-- 📊 **Comprehensive evaluation** – Accuracy, precision, recall, F1, ROC‑AUC, confusion matrix.
-- 📈 **Visualisations** – Word clouds for human vs AI, feature importance, confusion matrix, ROC curve.
-- 💾 **Model export** – Save the best model and vectorizer for deployment.
+-  **Comprehensive evaluation** – Accuracy, precision, recall, F1, ROC‑AUC, confusion matrix.
+-  **Visualisations** – Word clouds for human vs AI, feature importance, confusion matrix, ROC curve.
+-  **Model export** – Save the best model and vectorizer for deployment.
 
 ## Dataset
 

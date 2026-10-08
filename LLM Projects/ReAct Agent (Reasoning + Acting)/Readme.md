@@ -2,16 +2,20 @@
 
 **Author:** Saqib  
 
+## Visual Interface
+
+![Application Interface](assets/screenshot.png)
+
 ## Overview
 
 This project implements a **ReAct (Reasoning + Acting) agent** from scratch using only the Groq API. The agent interleaves **Thought**, **Action**, **Observation** steps to solve multi‑step problems. It demonstrates the core of agentic AI without relying on any high‑level framework – pure Python and API calls.
 
 ## Features
 
-- 🧠 **Manual ReAct loop** – No LangChain, no dependencies beyond Groq.
-- 🔧 **Two tools** – Weather (mock) and Calculator.
-- 🔁 **Multi‑step reasoning** – The agent can chain tool calls.
-- 💻 **Interactive** – Ask any question that requires tool use.
+-  **Manual ReAct loop** – No LangChain, no dependencies beyond Groq.
+-  **Two tools** – Weather (mock) and Calculator.
+-  **Multi‑step reasoning** – The agent can chain tool calls.
+-  **Interactive** – Ask any question that requires tool use.
 
 ## How It Works
 

@@ -2,6 +2,10 @@
 
 **Author:** Saqib  
 
+## Visual Interface
+
+![Application Interface](assets/screenshot.png)
+
 ## Overview
 
 This project analyses the TMDB 5000 movie dataset to uncover factors driving financial success. It examines relationships between budget, revenue, runtime, genre, release month, and audience ratings. The insights help answer questions like: Which genres are most profitable? Is there a correlation between budget and revenue? Which release months yield highest revenue?

@@ -2,17 +2,21 @@
 
 **Author:** Saqib  
 
+## Visual Interface
+
+![Application Interface](assets/screenshot.png)
+
 ## Overview
 
 This project builds a **binary text classifier** that distinguishes between human‑written text and AI‑generated text (e.g., from ChatGPT, GPT‑4, or similar models). Using a fine‑tuned BERT model, the system achieves high accuracy on a diverse dataset of human and AI samples. It is part of Saqib’s advanced NLP portfolio.
 
 ## Features
 
-- 🤖 **State‑of‑the‑art model** – Fine‑tunes BERT (`bert-base-uncased`) for sequence classification.
-- 📚 **Balanced dataset** – Contains thousands of human‑written and AI‑generated passages.
-- 📊 **Comprehensive evaluation** – Accuracy, precision, recall, F1, confusion matrix, ROC‑AUC.
-- 📈 **Visualisations** – Training curves, confusion matrix, ROC curve, and word clouds.
-- 💾 **Model export** – Save fine‑tuned model and tokenizer for deployment.
+-  **State‑of‑the‑art model** – Fine‑tunes BERT (`bert-base-uncased`) for sequence classification.
+-  **Balanced dataset** – Contains thousands of human‑written and AI‑generated passages.
+-  **Comprehensive evaluation** – Accuracy, precision, recall, F1, confusion matrix, ROC‑AUC.
+-  **Visualisations** – Training curves, confusion matrix, ROC curve, and word clouds.
+-  **Model export** – Save fine‑tuned model and tokenizer for deployment.
 
 ## Architecture
 

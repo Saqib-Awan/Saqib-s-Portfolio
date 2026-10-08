@@ -2,18 +2,22 @@
 
 **Author:** Saqib   
 
+## Visual Interface
+
+![Application Interface](assets/screenshot.png)
+
 ## Overview
 
 This project builds an **interactive Q&A system** for any YouTube video. Given a video URL, it fetches the transcript (subtitles), splits it into chunks, creates embeddings, and uses a local LLM (or Groq) to answer questions based *only* on the video content. This is a perfect study tool for lectures, tutorials, or any video content – part of Saqib’s advanced RAG portfolio.
 
 ## Features
 
-- 🎥 **YouTube transcript fetch** – Uses `youtube-transcript-api` to retrieve captions (supports manual and auto‑generated).
-- 🔍 **Chunking & vectorisation** – Recursive text splitter + `all-MiniLM-L6-v2` embeddings.
-- 🗃️ **FAISS vector store** – In‑memory index for fast similarity search.
-- 🤖 **Flexible LLM** – Uses Groq’s Llama 3.3 70B (fast) or falls back to a free Hugging Face model.
-- 📌 **Source attribution** – Shows which chunks were used to answer.
-- 💻 **Interactive Q&A loop** – Ask any question about the video content.
+-  **YouTube transcript fetch** – Uses `youtube-transcript-api` to retrieve captions (supports manual and auto‑generated).
+-  **Chunking & vectorisation** – Recursive text splitter + `all-MiniLM-L6-v2` embeddings.
+- ️ **FAISS vector store** – In‑memory index for fast similarity search.
+-  **Flexible LLM** – Uses Groq’s Llama 3.3 70B (fast) or falls back to a free Hugging Face model.
+-  **Source attribution** – Shows which chunks were used to answer.
+-  **Interactive Q&A loop** – Ask any question about the video content.
 
 ## Architecture
 

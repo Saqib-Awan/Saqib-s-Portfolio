@@ -2,6 +2,10 @@
 
 **Author:** Saqib    
 
+## Visual Interface
+
+![Application Interface](assets/screenshot.png)
+
 ## Overview
 
 This project implements a hybrid semantic search engine:
@@ -12,10 +16,10 @@ Combining vector search with an LLM judge gives the speed of embeddings and the 
 
 ## Features
 
-- 🔍 **Embedding‑based retrieval** – `all‑MiniLM‑L6‑v2` + FAISS.
-- 🧠 **LLM re‑ranking** – Groq evaluates and reorders top‑k documents.
-- 📚 **Sample corpus** – Built‑in news and facts.
-- 💻 **Interactive** – Try any query.
+-  **Embedding‑based retrieval** – `all‑MiniLM‑L6‑v2` + FAISS.
+-  **LLM re‑ranking** – Groq evaluates and reorders top‑k documents.
+-  **Sample corpus** – Built‑in news and facts.
+-  **Interactive** – Try any query.
 
 ## How It Works
 

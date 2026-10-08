@@ -2,18 +2,22 @@
 
 **Author:** Saqib  
 
+## Visual Interface
+
+![Application Interface](assets/screenshot.png)
+
 ## Overview
 
 This project performs **sentiment analysis** on mental health‑related text data (e.g., social media posts, therapy transcripts, or self‑reported statements). Using a combination of traditional machine learning (TF‑IDF + Logistic Regression) and a fine‑tuned BERT model, it classifies text into categories such as *anxiety*, *depression*, *normal*, *suicidal ideation*, or *stress*. The “Combined Data” refers to merging multiple public datasets to create a robust, generalised classifier.
 
 ## Features
 
-- 🧠 **Multi‑class classification** – Detects various mental health conditions (4–6 classes).
-- 📚 **Combined dataset** – Aggregates data from sources like Reddit, Twitter, and clinical transcripts.
+-  **Multi‑class classification** – Detects various mental health conditions (4–6 classes).
+-  **Combined dataset** – Aggregates data from sources like Reddit, Twitter, and clinical transcripts.
 - ⚖️ **Class balancing** – Handles imbalanced data using oversampling or class weights.
-- 🤖 **Two‑model approach** – Fast TF‑IDF + Logistic Regression baseline and high‑accuracy BERT fine‑tuned model.
-- 📊 **Professional evaluation** – Accuracy, precision, recall, F1, confusion matrix, ROC‑AUC (macro/micro).
-- 📈 **Visualisations** – Word clouds, class distribution bar chart, confusion matrix heatmap, ROC curves.
+-  **Two‑model approach** – Fast TF‑IDF + Logistic Regression baseline and high‑accuracy BERT fine‑tuned model.
+-  **Professional evaluation** – Accuracy, precision, recall, F1, confusion matrix, ROC‑AUC (macro/micro).
+-  **Visualisations** – Word clouds, class distribution bar chart, confusion matrix heatmap, ROC curves.
 
 ## Architecture
 

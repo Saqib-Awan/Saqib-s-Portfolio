@@ -2,6 +2,10 @@
 
 **Author:** Saqib  
 
+## Visual Interface
+
+![Application Interface](assets/screenshot.png)
+
 ## Overview
 
 This notebook implements a **prompt injection detection system** for Large Language Models (LLMs). It classifies user prompts as either **benign instructions** or **malicious prompt injection attacks** – an essential security layer for any production AI agent.

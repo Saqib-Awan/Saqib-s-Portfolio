@@ -2,18 +2,22 @@
 
 **Author:** Saqib  
 
+## Visual Interface
+
+![Application Interface](assets/screenshot.png)
+
 ## Overview
 
 This project implements a **Retrieval-Augmented Generation (RAG)** system that answers questions based on the content of uploaded PDF documents. Users can upload one or more PDF files, and the system will retrieve relevant chunks and generate accurate, grounded answers with source citations – no external internet search required. It is the foundational RAG project in Saqib’s portfolio.
 
 ## Features
 
-- 📄 **PDF upload** – Supports one or multiple PDFs (via Colab’s file upload).
-- 🔍 **Text extraction & chunking** – Splits documents into overlapping chunks.
-- 🧠 **Embedding & vector store** – Uses `all-MiniLM-L6-v2` + FAISS for efficient similarity search.
-- 🗣️ **Answer generation** – Uses Groq’s Llama 3.3 70B (or free local fallback) to produce grounded answers.
-- 📌 **Source citations** – The answer includes references to the source PDF filenames.
-- 💾 **Persistent index** – Optionally save the FAISS index to Google Drive for reuse.
+-  **PDF upload** – Supports one or multiple PDFs (via Colab’s file upload).
+-  **Text extraction & chunking** – Splits documents into overlapping chunks.
+-  **Embedding & vector store** – Uses `all-MiniLM-L6-v2` + FAISS for efficient similarity search.
+- ️ **Answer generation** – Uses Groq’s Llama 3.3 70B (or free local fallback) to produce grounded answers.
+-  **Source citations** – The answer includes references to the source PDF filenames.
+-  **Persistent index** – Optionally save the FAISS index to Google Drive for reuse.
 
 ## Architecture
 

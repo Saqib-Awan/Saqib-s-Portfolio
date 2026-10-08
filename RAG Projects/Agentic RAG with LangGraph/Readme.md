@@ -2,6 +2,10 @@
 
 **Author:** Saqib    
 
+## Visual Interface
+
+![Application Interface](assets/screenshot.png)
+
 ## Overview
 
 This project implements an **agentic Retrieval‑Augmented Generation (RAG)** system using **LangGraph**. Unlike simple linear RAG pipelines, this agent can reason about user queries and decide which actions to take: retrieve from a local vector store, rewrite the query for better retrieval, fall back to a web search (via Tavily API), or answer directly from its own knowledge.
@@ -10,11 +14,11 @@ The agent is built as a **stateful graph** where each node performs a specific a
 
 ## Features
 
-- 🧠 **Stateful agent** – Maintains conversation history and intermediate steps.
-- 🔍 **Multi‑source retrieval** – Internal FAISS index (PDF documents) + optional web search.
-- ✍️ **Query rewriting** – Automatically reformulates user questions to improve retrieval.
-- 🌐 **Web search fallback** – Uses Tavily API when local documents lack the answer.
-- 📊 **Step‑by‑step trace** – Prints every action taken (rewrite, retrieve, web search, generate).
+-  **Stateful agent** – Maintains conversation history and intermediate steps.
+-  **Multi‑source retrieval** – Internal FAISS index (PDF documents) + optional web search.
+- ️ **Query rewriting** – Automatically reformulates user questions to improve retrieval.
+-  **Web search fallback** – Uses Tavily API when local documents lack the answer.
+-  **Step‑by‑step trace** – Prints every action taken (rewrite, retrieve, web search, generate).
 - ⚡ **Fast LLM** – Powered by Groq’s Llama 3.3 70B.
 
 ## Architecture (LangGraph)
@@ -49,13 +53,13 @@ text
 7. Ask questions in the interactive loop. The agent will show each step it takes.
 
 ## Example Interaction
-🔍 Your question: What is the capital of France?
-📋 Steps taken: rewrote_query → retrieved_local → generated_answer
-💡 Answer: The capital of France is Paris. (source: local documents)
+ Your question: What is the capital of France?
+ Steps taken: rewrote_query → retrieved_local → generated_answer
+ Answer: The capital of France is Paris. (source: local documents)
 
-🔍 Your question: What is the latest news about AI?
-📋 Steps taken: rewrote_query → retrieved_local → web_search → generated_answer
-💡 Answer: [Retrieved real‑time news results via Tavily]
+ Your question: What is the latest news about AI?
+ Steps taken: rewrote_query → retrieved_local → web_search → generated_answer
+ Answer: [Retrieved real‑time news results via Tavily]
 
 text
 

@@ -2,6 +2,10 @@
 
 **Author:** Saqib   
 
+## Visual Interface
+
+![Application Interface](assets/screenshot.png)
+
 ## Overview
 
 This project detects fraudulent credit card transactions using machine learning. The dataset is highly imbalanced (0.17% fraud). Techniques include SMOTE oversampling, scaling, and training multiple classifiers (Logistic Regression, Random Forest, XGBoost). Evaluation focuses on precision‑recall curves and AUC‑PR, which are more meaningful than accuracy for imbalanced problems.

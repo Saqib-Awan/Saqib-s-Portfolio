@@ -2,6 +2,10 @@
 
 **Author:** Saqib  
 
+## Visual Interface
+
+![Application Interface](assets/screenshot.png)
+
 ## Overview
 
 This project implements a **multi‑label toxicity detection system** that identifies different types of toxic content in online comments. The model predicts six distinct toxicity attributes:  
@@ -11,13 +15,13 @@ It uses a **multi‑output logistic regression** model with TF‑IDF features, t
 
 ## Features
 
-- 🧹 **Multi‑label classification** – One binary prediction per toxicity type.
-- 📊 **TF‑IDF vectorisation** – Unigrams + bigrams with 10,000 features.
-- 🤖 **Multi‑output Logistic Regression** – Fast, interpretable, well‑suited for sparse text.
-- 📈 **Evaluation** – ROC‑AUC per label, confusion matrices, classification reports.
-- 🎨 **Visualisations** – Label distribution, correlation heatmap, word clouds, ROC curves.
-- 💾 **Model export** – Save trained model, vectorizer, and label columns for deployment.
-- 📝 **Kaggle submission** – Generates probability predictions in the required format.
+-  **Multi‑label classification** – One binary prediction per toxicity type.
+-  **TF‑IDF vectorisation** – Unigrams + bigrams with 10,000 features.
+-  **Multi‑output Logistic Regression** – Fast, interpretable, well‑suited for sparse text.
+-  **Evaluation** – ROC‑AUC per label, confusion matrices, classification reports.
+-  **Visualisations** – Label distribution, correlation heatmap, word clouds, ROC curves.
+-  **Model export** – Save trained model, vectorizer, and label columns for deployment.
+-  **Kaggle submission** – Generates probability predictions in the required format.
 
 ## Dataset
 

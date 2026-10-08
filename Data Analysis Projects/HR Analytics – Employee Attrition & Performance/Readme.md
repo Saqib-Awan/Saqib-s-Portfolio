@@ -2,6 +2,10 @@
 
 **Author:** Saqib  
 
+## Visual Interface
+
+![Application Interface](assets/screenshot.png)
+
 ## Overview
 
 This project analyses employee attrition (turnover) using IBM’s HR dataset. It identifies key factors associated with employees leaving, such as monthly income, overtime, job satisfaction, and tenure. The insights help HR departments design targeted retention strategies.

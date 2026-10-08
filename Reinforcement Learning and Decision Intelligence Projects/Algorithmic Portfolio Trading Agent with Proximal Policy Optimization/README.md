@@ -1,0 +1,51 @@
+# Algorithmic Portfolio Trading Agent with Proximal Policy Optimization
+
+## Abstract
+
+PPO Continuous Actions, Transaction Cost Penalty, and Sharpe Ratio Maximization. This project implements a cutting-edge reinforcement learning and sequential decision intelligence system delivering rigorous convergence guarantees and sub-second control execution.
+
+## Visual Interface
+
+![Application Interface](assets/screenshot.png)
+
+## Architecture and Pipeline
+
+1. **Environment Observation and State Formulation**: Ingests multi-modal state representations, sensor readings, and market order books.
+2. **Policy and Value Optimization**: Employs deep reinforcement learning agents (PPO, DPO, D3QN, SAC, AlphaZero) with entropy regularized objectives.
+3. **Reward Modeling and Credit Assignment**: Maximizes risk-adjusted returns, preference alignment, or system throughput.
+4. **Interactive Dashboard**: Displays live cumulative reward trajectories, action distributions, and policy loss curves.
+
+## Project Structure
+
+```text
+Algorithmic Portfolio Trading Agent with Proximal Policy Optimization/
+├── app.py              # Main interactive Streamlit application and CLI runner
+├── trading_ppo.py     # Core reinforcement learning policy and optimization engine
+├── requirements.txt    # Project dependencies
+├── README.md           # Technical documentation and mathematical formulation
+└── assets/
+    └── screenshot.png  # Application interface preview
+```
+
+## Installation and Setup
+
+```bash
+cd "Reinforcement Learning and Decision Intelligence Projects/Algorithmic Portfolio Trading Agent with Proximal Policy Optimization"
+python -m venv venv
+venv\Scripts\activate
+pip install -r requirements.txt
+```
+
+## Running the Application
+
+### Web Dashboard
+
+```bash
+streamlit run app.py
+```
+
+### CLI Mode
+
+```bash
+python app.py
+```

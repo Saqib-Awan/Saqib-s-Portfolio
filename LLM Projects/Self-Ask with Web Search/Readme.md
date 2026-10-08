@@ -2,16 +2,20 @@
 
 **Author:** Saqib  
 
+## Visual Interface
+
+![Application Interface](assets/screenshot.png)
+
 ## Overview  
 
 This project implements a self-ask agent that uses Groq’s Llama 3.3 to decide whether a web search is needed. If the LLM determines external information is required, it generates a search query, fetches results via Tavily API, and then answers the user. This pattern mimics how advanced AI assistants (like perplexity.ai) work.
 
 ## Features  
 
-- 🧠 **LLM decides** – Autonomous choice between internal knowledge and web search.  
-- 🌐 **Real‑time search** – Integrates Tavily API for up‑to‑date information.  
-- 💬 **Interactive** – Ask any factual or current question.  
-- 🧪 **No framework overhead** – Pure Python + API calls.  
+-  **LLM decides** – Autonomous choice between internal knowledge and web search.  
+-  **Real‑time search** – Integrates Tavily API for up‑to‑date information.  
+-  **Interactive** – Ask any factual or current question.  
+-  **No framework overhead** – Pure Python + API calls.  
 
 ## Setup  
 
@@ -21,11 +25,11 @@ This project implements a self-ask agent that uses Groq’s Llama 3.3 to decide 
 ## Example  
 
 **User:** What is the current population of Japan?  
-**Agent:** 🔍 Searching for "current population of Japan"  
+**Agent:**  Searching for "current population of Japan"  
 **Bot:** As of 2025, Japan's population is approximately 124 million.  
 
 **User:** Who wrote 'Romeo and Juliet'?  
-**Agent:** 🧠 Used internal knowledge  
+**Agent:**  Used internal knowledge  
 **Bot:** William Shakespeare.  
 
 ## Files  

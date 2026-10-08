@@ -2,17 +2,21 @@
 
 **Author:** Saqib  
 
+## Visual Interface
+
+![Application Interface](assets/screenshot.png)
+
 ## Overview  
 
 Standard chatbots forget previous messages once the context window fills up. This project solves that problem by periodically compressing the conversation into a summary that is then used as memory. The summarisation is performed by Groq’s Llama, allowing long conversations to stay coherent without exceeding token limits.  
 
 ## Features  
 
-- 💬 Multi‑turn dialogue with recall of past topics.  
-- 🔄 Automatic summarisation after every N exchanges.  
-- 🧠 Uses Groq’s fast LLM for both chat and summarisation.  
-- 💾 Summary persists and can be saved or reloaded.  
-- 🧪 Interactive console with a `summary` command to inspect memory.  
+-  Multi‑turn dialogue with recall of past topics.  
+-  Automatic summarisation after every N exchanges.  
+-  Uses Groq’s fast LLM for both chat and summarisation.  
+-  Summary persists and can be saved or reloaded.  
+-  Interactive console with a `summary` command to inspect memory.  
 
 ## How It Works  
 

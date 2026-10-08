@@ -2,6 +2,10 @@
 
 **Author:** Saqib  
 
+## Visual Interface
+
+![Application Interface](assets/screenshot.png)
+
 ## Overview
 
 This project performs a comprehensive exploratory data analysis on retail sales data from a global superstore. The analysis uncovers trends in sales and profit, identifies top products and loss‑making items, evaluates regional performance, and examines the impact of discounts. The notebook contains **10 professional visualisations** suitable for business presentations.

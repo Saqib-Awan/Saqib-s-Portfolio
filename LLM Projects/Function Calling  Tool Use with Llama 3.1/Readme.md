@@ -2,6 +2,10 @@
 
 **Author:** Saqib   
 
+## Visual Interface
+
+![Application Interface](assets/screenshot.png)
+
 ## Overview
 
 This project demonstrates **function calling (tool use)** – a core capability for building agentic AI systems. Using Groq’s Llama 3.3 70B model, the assistant autonomously decides when to call external tools, extracts parameters from natural language, and incorporates the results into its final answer.
@@ -13,12 +17,12 @@ Unlike simple chatbots, this system can:
 
 ## Features
 
-- 🧠 **Autonomous tool selection** – The model decides which tool (if any) to call.
-- 🔧 **Two built‑in tools**:
+-  **Autonomous tool selection** – The model decides which tool (if any) to call.
+-  **Two built‑in tools**:
   - `get_current_weather` – Returns mock weather data (easily replaceable with a real API).
   - `calculate` – Safely evaluates mathematical expressions.
-- 🔌 **Extensible design** – Add your own tools (database queries, web search, etc.) by defining the function schema and implementation.
-- 📦 **Uses Groq’s native function calling API** – Fast inference on free tier.
+-  **Extensible design** – Add your own tools (database queries, web search, etc.) by defining the function schema and implementation.
+-  **Uses Groq’s native function calling API** – Fast inference on free tier.
 
 ## Architecture
 
@@ -44,18 +48,18 @@ Unlike simple chatbots, this system can:
    - *"What is the weather in Tokyo in fahrenheit?"*
 
 ## Example Interaction
-🔍 Your question: What is the weather in Paris?
+ Your question: What is the weather in Paris?
 
-🔧 Calling tool: get_current_weather with args {'location': 'Paris', 'unit': 'celsius'}
+ Calling tool: get_current_weather with args {'location': 'Paris', 'unit': 'celsius'}
 
-🤖 The current weather in Paris is 22°C and sunny.
+ The current weather in Paris is 22°C and sunny.
 
 text
-🔍 Your question: Compute the square root of 144 plus 10
+ Your question: Compute the square root of 144 plus 10
 
-🔧 Calling tool: calculate with args {'expression': 'sqrt(144) + 10'}
+ Calling tool: calculate with args {'expression': 'sqrt(144) + 10'}
 
-🤖 The result of sqrt(144) + 10 is 22.0.
+ The result of sqrt(144) + 10 is 22.0.
 
 text
 

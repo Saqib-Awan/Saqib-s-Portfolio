@@ -2,18 +2,22 @@
 
 **Author:** Saqib   
 
+## Visual Interface
+
+![Application Interface](assets/screenshot.png)
+
 ## Overview
 
 This project builds a **fake news detection system** that classifies news articles as either **FAKE** or **REAL**. Using natural language processing and machine learning, the system analyses article text and predicts its veracity. It serves as a tool to combat misinformation across multiple news genres (politics, entertainment, science, etc.). The project uses a balanced dataset of labelled fake and real news articles.
 
 ## Features
 
-- 📰 **Binary classification** – FAKE (0) vs REAL (1).
-- 🔍 **TF‑IDF vectorisation** – Converts text to numerical features (unigrams + bigrams).
-- 🤖 **Logistic Regression model** – Fast, interpretable, high‑accuracy baseline.
-- 📊 **Comprehensive evaluation** – Accuracy, precision, recall, F1, ROC‑AUC, confusion matrix.
-- 📈 **Visualisations** – Word clouds for fake vs real, confusion matrix, ROC curve, top predictive features.
-- 💾 **Model export** – Save model and vectorizer for deployment.
+-  **Binary classification** – FAKE (0) vs REAL (1).
+-  **TF‑IDF vectorisation** – Converts text to numerical features (unigrams + bigrams).
+-  **Logistic Regression model** – Fast, interpretable, high‑accuracy baseline.
+-  **Comprehensive evaluation** – Accuracy, precision, recall, F1, ROC‑AUC, confusion matrix.
+-  **Visualisations** – Word clouds for fake vs real, confusion matrix, ROC curve, top predictive features.
+-  **Model export** – Save model and vectorizer for deployment.
 
 ## Dataset
 

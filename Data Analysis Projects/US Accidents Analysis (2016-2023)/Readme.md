@@ -2,6 +2,10 @@
 
 **Author:** Saqib   
 
+## Visual Interface
+
+![Application Interface](assets/screenshot.png)
+
 ## Overview
 
 This project analyses traffic accident data from the US (2016-2023). It identifies peak hours, seasonal trends, hazardous weather conditions, and geographic hotspots. The insights help authorities improve road safety measures.

@@ -2,19 +2,23 @@
 
 **Author:** Saqib  
 
+## Visual Interface
+
+![Application Interface](assets/screenshot.png)
+
 ## Overview
 
 This project builds a **multilingual hate speech detection system** that classifies text as **hate speech** or **non‑hate** across multiple languages. Using a combination of character‑based TF‑IDF vectorisation and logistic regression, the model is trained on a diverse dataset containing examples in English, Spanish, German, Italian, and other languages. The system is designed for real‑time content moderation on global platforms, helping to identify and flag harmful content regardless of language.
 
 ## Features
 
-- 🌐 **Multilingual support** – Works on text in English, Spanish, German, Italian, and more.
+-  **Multilingual support** – Works on text in English, Spanish, German, Italian, and more.
 - ⚖️ **Binary classification** – Hate speech vs non‑hate (labels: 1 = hate, 0 = non‑hate).
-- 🔍 **Character‑level TF‑IDF** – Uses n‑grams of characters (n=1..3) to capture language‑agnostic patterns.
-- 🤖 **Logistic Regression** – Fast, interpretable, and effective for this task.
-- 📊 **Comprehensive evaluation** – Accuracy, precision, recall, F1, ROC‑AUC, confusion matrix.
-- 📈 **Visualisations** – Word clouds for hate vs non‑hate, confusion matrix, ROC curve, top features.
-- 💾 **Model export** – Save model and vectorizer for deployment on moderation APIs.
+-  **Character‑level TF‑IDF** – Uses n‑grams of characters (n=1..3) to capture language‑agnostic patterns.
+-  **Logistic Regression** – Fast, interpretable, and effective for this task.
+-  **Comprehensive evaluation** – Accuracy, precision, recall, F1, ROC‑AUC, confusion matrix.
+-  **Visualisations** – Word clouds for hate vs non‑hate, confusion matrix, ROC curve, top features.
+-  **Model export** – Save model and vectorizer for deployment on moderation APIs.
 
 ## Dataset
 
