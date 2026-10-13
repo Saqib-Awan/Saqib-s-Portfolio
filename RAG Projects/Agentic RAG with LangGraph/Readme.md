@@ -2,10 +2,6 @@
 
 **Author:** Saqib    
 
-## Visual Interface
-
-![Application Interface](assets/screenshot.png)
-
 ## Overview
 
 This project implements an **agentic Retrieval‑Augmented Generation (RAG)** system using **LangGraph**. Unlike simple linear RAG pipelines, this agent can reason about user queries and decide which actions to take: retrieve from a local vector store, rewrite the query for better retrieval, fall back to a web search (via Tavily API), or answer directly from its own knowledge.

@@ -2,10 +2,6 @@
 
 **Author:** Saqib   
 
-## Visual Interface
-
-![Application Interface](assets/screenshot.png)
-
 ## Overview
 
 This project builds a **multi‑modal Retrieval‑Augmented Generation (RAG)** system that can answer questions about documents containing both **text and images**. It extracts text from PDF pages, generates descriptive captions for figures and diagrams (using BLIP), combines both modalities into a unified vector index, and performs retrieval‑augmented answering with Groq’s Llama 3.3 70B.

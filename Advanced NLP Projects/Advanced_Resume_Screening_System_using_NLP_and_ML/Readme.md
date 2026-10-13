@@ -2,10 +2,6 @@
 
 **Author:** Saqib   
 
-## Visual Interface
-
-![Application Interface](assets/screenshot.png)
-
 ## Overview
 
 This project builds an **intelligent resume screening system** that automatically classifies resumes into job categories (e.g., Data Scientist, Software Engineer, HR, Marketing, etc.). Using natural language processing and machine learning, the system extracts relevant features from unstructured resume text and predicts the most suitable job role. This helps HR teams filter large volumes of applications efficiently.

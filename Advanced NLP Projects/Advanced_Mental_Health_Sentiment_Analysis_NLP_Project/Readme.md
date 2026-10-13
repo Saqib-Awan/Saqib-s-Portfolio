@@ -2,10 +2,6 @@
 
 **Author:** Saqib  
 
-## Visual Interface
-
-![Application Interface](assets/screenshot.png)
-
 ## Overview
 
 This project performs **sentiment analysis** on mental health‑related text data (e.g., social media posts, therapy transcripts, or self‑reported statements). Using a combination of traditional machine learning (TF‑IDF + Logistic Regression) and a fine‑tuned BERT model, it classifies text into categories such as *anxiety*, *depression*, *normal*, *suicidal ideation*, or *stress*. The “Combined Data” refers to merging multiple public datasets to create a robust, generalised classifier.

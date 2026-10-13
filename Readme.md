@@ -256,4 +256,3 @@ Focus: SLAM with ROS2, MoveIt2 manipulation, Isaac Sim locomotion, and sensor fu
 - [Simulation-to-Real Domain Randomization and Policy Transfer Pipeline](Robotics%20and%20Embodied%20AI%20Projects/Simulation-to-Real%20Domain%20Randomization%20and%20Policy%20Transfer%20Pipeline)
 - [Visual Inertial Odometry for GPS-Denied Autonomous Navigation](Robotics%20and%20Embodied%20AI%20Projects/Visual%20Inertial%20Odometry%20for%20GPS-Denied%20Autonomous%20Navigation)
 - [Visual Servoing and Target Tracking for Industrial Cobots](Robotics%20and%20Embodied%20AI%20Projects/Visual%20Servoing%20and%20Target%20Tracking%20for%20Industrial%20Cobots)
-

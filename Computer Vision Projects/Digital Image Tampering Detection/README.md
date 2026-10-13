@@ -1,9 +1,5 @@
 # Digital Image Tampering Detection: CASIA Dataset
 
-## Visual Interface
-
-![Application Interface](assets/screenshot.png)
-
 ## Overview
 This project focuses on detecting digital image tampering using the CASIA dataset. The CASIA dataset is a comprehensive collection of images used for research in image forensics.
 
@@ -65,7 +61,6 @@ Open the `notebook.ipynb` notebook and run the cells to execute the code.
 7. **Data Augmentation**: Apply data augmentation techniques to improve model performance.
 
 8. **Train and Evaluate**: Train the model, validate it, and evaluate its performance on the test set.
-
 
 ## Usability
 - **Usability Score**: 3.13

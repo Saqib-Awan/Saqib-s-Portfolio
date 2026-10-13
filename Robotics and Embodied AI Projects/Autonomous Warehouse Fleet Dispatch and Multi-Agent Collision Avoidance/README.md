@@ -3,14 +3,6 @@
 ## Executive Summary
 This enterprise-grade production repository delivers state-of-the-art computational engineering and deep domain AI for conflict-based search (cbs), dynamic space-time reservoirs, and order dispatch orchestration. Built from the ground up with high-throughput multi-threaded architectures, modular mathematical engines, and automated SLA latency benchmark suites.
 
-## Visual Interface & Architecture
-
-### Production Application Interface (Layout Archetype #9)
-![Application Interface](assets/screenshot.png)
-
-### Model Telemetry & System Diagnostics
-![System Diagnostics](assets/analytics_telemetry.png)
-
 ## Core Technical Specifications
 - **Multi-Module Enterprise Architecture:** Composed of primary interactive application (`app.py` - 340 LOC), computational domain engine (`fleet_cbs.py` - 404 LOC), and concurrency profiling suite (`evaluator_benchmark.py` - 345 LOC). Total codebase: 1089 lines of code.
 - **High Concurrency Support:** Threaded transaction execution supporting 16 to 256 concurrent requests with sub-25 millisecond response times.
@@ -30,9 +22,6 @@ This enterprise-grade production repository delivers state-of-the-art computatio
 |-- fleet_cbs.py               # Core mathematical engine and algorithms (404 LOC)
 |-- evaluator_benchmark.py     # Stress testing and latency profiling suite (345 LOC)
 |-- requirements.txt           # Project dependencies
-|-- assets/
-|   |-- screenshot.png         # Main production UI screenshot
-|   `-- analytics_telemetry.png # Telemetry & diagnostic charts
 `-- README.md                  # Comprehensive project documentation
 ```
 

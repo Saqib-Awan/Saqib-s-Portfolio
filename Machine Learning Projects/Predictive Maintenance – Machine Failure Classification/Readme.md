@@ -2,10 +2,6 @@
 
 **Author:** Saqib   
 
-## Visual Interface
-
-![Application Interface](assets/screenshot.png)
-
 ## Overview
 
 This project predicts machine failure using sensor data (temperatures, rotational speed, torque, tool wear). By identifying failure precursors, manufacturers can reduce unplanned downtime. The notebook includes feature engineering (temperature difference, power), model comparison (Logistic Regression, Random Forest, XGBoost), hyperparameter tuning, and SHAP interpretation.

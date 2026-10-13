@@ -2,10 +2,6 @@
 
 A Streamlit app to chat over multiple PDF documents. It builds a local FAISS index of PDF text using Google Generative AI embeddings and answers questions with Gemini (`gemini-pro`).
 
-## Visual Interface
-
-![Application Interface](assets/screenshot.png)
-
 ## Overview
 
 - Upload one or more PDFs and process them into chunks

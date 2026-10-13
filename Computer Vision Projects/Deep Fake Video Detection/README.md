@@ -1,9 +1,5 @@
 # DeepFake Video Detection and Time Series Prediction using LSTM
 
-## Visual Interface
-
-![Application Interface](assets/screenshot.png)
-
 ## Overview
 
 This project consists of two main tasks:

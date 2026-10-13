@@ -2,10 +2,6 @@
 
 **Author:** Saqib   
 
-## Visual Interface
-
-![Application Interface](assets/screenshot.png)
-
 ## Overview
 
 This project builds an **interactive Q&A system** for any YouTube video. Given a video URL, it fetches the transcript (subtitles), splits it into chunks, creates embeddings, and uses a local LLM (or Groq) to answer questions based *only* on the video content. This is a perfect study tool for lectures, tutorials, or any video content – part of Saqib’s advanced RAG portfolio.

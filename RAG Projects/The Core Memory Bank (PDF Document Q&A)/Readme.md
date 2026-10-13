@@ -2,10 +2,6 @@
 
 **Author:** Saqib  
 
-## Visual Interface
-
-![Application Interface](assets/screenshot.png)
-
 ## Overview
 
 This project implements a **Retrieval-Augmented Generation (RAG)** system that answers questions based on the content of uploaded PDF documents. Users can upload one or more PDF files, and the system will retrieve relevant chunks and generate accurate, grounded answers with source citations – no external internet search required. It is the foundational RAG project in Saqib’s portfolio.

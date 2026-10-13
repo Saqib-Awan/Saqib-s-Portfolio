@@ -2,10 +2,6 @@
 
 **Author:** Saqib  
 
-## Visual Interface
-
-![Application Interface](assets/screenshot.png)
-
 ## Overview
 
 This project predicts bank customer churn using demographic, balance, and activity features. Three models (Logistic Regression, Random Forest, XGBoost) are compared, with XGBoost performing best after hyperparameter tuning. The insights help banks proactively retain valuable customers.

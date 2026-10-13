@@ -2,10 +2,6 @@
 
 A notebook-driven project for summarizing text content using LangChain and OpenAI. It includes utilities for loading and preprocessing text or PDFs and generating concise summaries.
 
-## Visual Interface
-
-![Application Interface](assets/screenshot.png)
-
 ## Overview
 
 - Load and preprocess text/PDF content (packages include `unstructured`, `PyPDF2`, `pdfminer`, `pdf2image`)

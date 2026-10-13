@@ -2,10 +2,6 @@
 
 **Author:** Saqib  
 
-## Visual Interface
-
-![Application Interface](assets/screenshot.png)
-
 ## Overview
 
 This notebook implements a **systematic evaluation framework** for Retrieval‑Augmented Generation (RAG) systems. It measures the quality of both retrieval and generation using four key metrics:

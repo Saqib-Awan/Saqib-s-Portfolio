@@ -2,10 +2,6 @@
 
 **Author:** Saqib  
 
-## Visual Interface
-
-![Application Interface](assets/screenshot.png)
-
 ## Overview
 
 This project builds a **sentiment classification system** for financial news headlines. Given a news headline about a company, stock, or economic event, the model predicts whether the sentiment is **positive**, **negative**, or **neutral**. This is a critical tool for algorithmic trading, market analysis, and risk management. The system uses traditional NLP (TF‑IDF) and machine learning (Logistic Regression, Random Forest) to achieve high accuracy on financial text data.

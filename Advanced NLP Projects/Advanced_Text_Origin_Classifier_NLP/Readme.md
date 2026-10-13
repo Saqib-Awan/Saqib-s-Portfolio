@@ -2,10 +2,6 @@
 
 **Author:** Saqib  
 
-## Visual Interface
-
-![Application Interface](assets/screenshot.png)
-
 ## Overview
 
 This project builds a **binary text classifier** that distinguishes between human‑written text and AI‑generated text (e.g., from GPT models, ChatGPT, or other LLMs). Using advanced NLP techniques including TF‑IDF with character n‑grams, stylometric features, and a fine‑tuned transformer model (BERT, RoBERTa, or DistilBERT), it achieves high accuracy on a diverse dataset of AI vs human examples.

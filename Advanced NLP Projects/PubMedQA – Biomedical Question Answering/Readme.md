@@ -2,10 +2,6 @@
 
 **Author:** Saqib  
 
-## Visual Interface
-
-![Application Interface](assets/screenshot.png)
-
 ## Overview
 
 This notebook implements a **biomedical question‑answering system** that answers clinical questions based on PubMed abstracts. Using a fine‑tuned BERT model, it classifies the question + abstract pair into **YES**, **NO**, or **MAYBE** – a task from the PubMedQA benchmark. This demonstrates how domain‑specific language models can support evidence‑based medicine and clinical decision support.

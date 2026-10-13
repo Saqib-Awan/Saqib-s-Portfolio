@@ -2,10 +2,6 @@
 
 **Author:** Saqib   
 
-## Visual Interface
-
-![Application Interface](assets/screenshot.png)
-
 ## Overview
 
 This project builds a **fake news detection system** that classifies news articles as either **FAKE** or **REAL**. Using natural language processing and machine learning, the system analyses article text and predicts its veracity. It serves as a tool to combat misinformation across multiple news genres (politics, entertainment, science, etc.). The project uses a balanced dataset of labelled fake and real news articles.

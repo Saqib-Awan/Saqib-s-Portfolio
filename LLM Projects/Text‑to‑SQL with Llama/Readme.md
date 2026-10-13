@@ -2,10 +2,6 @@
 
 **Author:** Saqib  
 
-## Visual Interface
-
-![Application Interface](assets/screenshot.png)
-
 ## Overview
 This project implements a **Text‑to‑SQL** system using Groq's Llama 3.3 70B model. Users ask questions in plain English about a sample sales database, and the LLM generates a SQL query, executes it, and returns a natural language answer.
 

@@ -2,10 +2,6 @@
 
 A Streamlit app that loads news articles from URLs, chunks the content, builds an OpenAI-embeddings FAISS index, and answers questions with cited sources.
 
-## Visual Interface
-
-![Application Interface](assets/screenshot.png)
-
 ## Overview
 
 - Enter up to three URLs in the sidebar

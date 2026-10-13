@@ -2,10 +2,6 @@
 
 **Author:** Saqib  
 
-## Visual Interface
-
-![Application Interface](assets/screenshot.png)
-
 ## Overview
 
 This project implements a **multi‑label toxicity detection system** that identifies different types of toxic content in online comments. The model predicts six distinct toxicity attributes:  

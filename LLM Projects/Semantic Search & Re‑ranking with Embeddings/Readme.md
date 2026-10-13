@@ -2,10 +2,6 @@
 
 **Author:** Saqib    
 
-## Visual Interface
-
-![Application Interface](assets/screenshot.png)
-
 ## Overview
 
 This project implements a hybrid semantic search engine:

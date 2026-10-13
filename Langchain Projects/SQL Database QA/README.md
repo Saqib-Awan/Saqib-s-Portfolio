@@ -2,10 +2,6 @@
 
 A Streamlit app that answers questions about a MySQL t‑shirts inventory using LangChain’s SQL chain with few‑shot prompting and semantic example selection. It generates SQL, executes it against the database, and returns a grounded answer.
 
-## Visual Interface
-
-![Application Interface](assets/screenshot.png)
-
 ## Overview
 
 - MySQL schema and seed data provided in `database/db_creation_atliq_t_shirts.sql`

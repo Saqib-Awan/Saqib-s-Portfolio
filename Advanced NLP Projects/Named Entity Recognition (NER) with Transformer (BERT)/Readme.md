@@ -2,10 +2,6 @@
 
 **Author:** Saqib  
 
-## Visual Interface
-
-![Application Interface](assets/screenshot.png)
-
 ## Overview
 
 This project implements a **Named Entity Recognition (NER) system** using a fine‑tuned transformer model (DistilBERT). NER is the task of extracting entities like persons, locations, organisations, and miscellaneous names from text. It is a fundamental building block for information extraction, search engines, and knowledge graph construction.

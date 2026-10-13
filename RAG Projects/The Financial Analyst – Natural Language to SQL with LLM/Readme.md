@@ -2,10 +2,6 @@
 
 **Author:** Saqib  
 
-## Visual Interface
-
-![Application Interface](assets/screenshot.png)
-
 ## Overview
 
 This project implements a **Text‑to‑SQL** system that allows users to ask natural language questions about a structured database and receive answers in plain English. Using Groq’s Llama 3.3 70B model, the system translates a user’s question into a SQL query, executes it on a SQLite database, and then converts the query results into a human‑readable response. It effectively bridges the gap between unstructured language and structured data – a core capability for AI‑powered business intelligence.

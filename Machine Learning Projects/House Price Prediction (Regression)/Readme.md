@@ -2,10 +2,6 @@
 
 **Author:** Saqib  
 
-## Visual Interface
-
-![Application Interface](assets/screenshot.png)
-
 ## Overview
 
 This project predicts house sale prices using the Ames Housing dataset. It includes data cleaning, feature engineering, handling missing values, and training regression models (Linear Regression, Ridge, Lasso, Random Forest, XGBoost). The final tuned XGBoost model achieves strong R² and low MAE. The notebook contains 10 professional visualisations.

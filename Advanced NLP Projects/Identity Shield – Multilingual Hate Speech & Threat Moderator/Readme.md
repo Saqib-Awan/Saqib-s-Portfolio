@@ -2,10 +2,6 @@
 
 **Author:** Saqib  
 
-## Visual Interface
-
-![Application Interface](assets/screenshot.png)
-
 ## Overview
 
 This project builds a **multilingual hate speech detection system** that classifies text as **hate speech** or **non‑hate** across multiple languages. Using a combination of character‑based TF‑IDF vectorisation and logistic regression, the model is trained on a diverse dataset containing examples in English, Spanish, German, Italian, and other languages. The system is designed for real‑time content moderation on global platforms, helping to identify and flag harmful content regardless of language.

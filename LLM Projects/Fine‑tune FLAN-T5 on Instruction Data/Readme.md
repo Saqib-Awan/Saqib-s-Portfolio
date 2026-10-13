@@ -2,10 +2,6 @@
 
 **Author:** Saqib  
 
-## Visual Interface
-
-![Application Interface](assets/screenshot.png)
-
 ## Overview
 
 This project fine‑tunes a small, efficient instruction‑tuned language model – **FLAN‑T5‑Small** – on a subset of the Databricks Dolly 15k dataset. The goal is to demonstrate the end‑to‑end fine‑tuning pipeline: loading data, tokenising, training, saving, and inference. Despite the model’s modest size, the notebook proves the ability to adapt a general‑purpose LLM to follow instructions.

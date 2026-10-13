@@ -2,10 +2,6 @@
 
 A Streamlit app that builds a local FAISS index from a CSV of FAQs and answers questions using Google PaLM. Uses `HuggingFaceInstructEmbeddings` to embed rows from `codebasics_faqs.csv` and retrieves relevant context to ground responses.
 
-## Visual Interface
-
-![Application Interface](assets/screenshot.png)
-
 ## Overview
 
 - Click `Create Knowledgebase` to embed `codebasics_faqs.csv` and save a local FAISS index

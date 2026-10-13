@@ -2,10 +2,6 @@
 
 **Author:** Saqib  
 
-## Visual Interface
-
-![Application Interface](assets/screenshot.png)
-
 ## Overview  
 
 Standard chatbots forget previous messages once the context window fills up. This project solves that problem by periodically compressing the conversation into a summary that is then used as memory. The summarisation is performed by Groq’s Llama, allowing long conversations to stay coherent without exceeding token limits.  

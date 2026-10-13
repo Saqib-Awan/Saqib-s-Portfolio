@@ -1,9 +1,4 @@
-
 # Fire Detection using YOLOv8
-
-## Visual Interface
-
-![Application Interface](assets/screenshot.png)
 
 ## :red_circle: Title
 Fire Detection using YOLOv8
@@ -55,8 +50,6 @@ python main.py --input path/to/image.jpg --output path/to/output.jpg
 ```
 
 ## Screenshots 
-![image](https://github.com/user-attachments/assets/415f5dfe-ee33-42b4-aa8e-2466ad8c6d45)
-
 
 ## Contributions
 Feel free to contribute to this project. Please adhere to the following guidelines while making contributions:

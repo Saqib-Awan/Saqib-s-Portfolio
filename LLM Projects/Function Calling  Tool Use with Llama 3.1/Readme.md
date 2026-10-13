@@ -2,10 +2,6 @@
 
 **Author:** Saqib   
 
-## Visual Interface
-
-![Application Interface](assets/screenshot.png)
-
 ## Overview
 
 This project demonstrates **function calling (tool use)** – a core capability for building agentic AI systems. Using Groq’s Llama 3.3 70B model, the assistant autonomously decides when to call external tools, extracts parameters from natural language, and incorporates the results into its final answer.

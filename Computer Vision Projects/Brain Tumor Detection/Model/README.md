@@ -65,16 +65,12 @@ Brain Tumor Detection
 ### Model Performance
 #### Convolutional Neural Network (CNN)
 - **Structure**  
-   ![CNN Structure](../Images/image-1.png)
 
 - **Loss vs. Epochs and Accuracy vs. Epochs**  
-   ![Loss vs. Epochs and Accuracy vs. Epochs](../Images/image-2.png)
 
 - **Performance Metrics**  
-   ![Performance Metrics](../Images/image.png)
 
 - **Confusion Matrix**  
-   ![Confusion Matrix](../Images/image-10.png)
 
 - **Classification Report**  
    ```
@@ -92,16 +88,12 @@ Brain Tumor Detection
 
 #### Multilayer Perceptron (MLP) Based on TensorFlow
 - **Structure**  
-   ![MLP Structure](../Images/image-7.png)
 
 - **Loss vs. Epochs and Accuracy vs. Epochs**  
-   ![Loss vs. Epochs and Accuracy vs. Epochs](../Images/image-3.png)
 
 - **Performance Metrics**  
-   ![Performance Metrics](../Images/image-4.png)
 
 - **Confusion Matrix**  
-   ![Confusion Matrix](../Images/image-9.png)
 
 - **Classification Report**  
    ```
@@ -119,16 +111,12 @@ Brain Tumor Detection
 
 #### VGG16 Transfer Learning Model
 - **Structure**  
-   ![VGG16 Structure](../Images/image-8.png)
 
 - **Loss vs. Epochs and Accuracy vs. Epochs**  
-   ![Loss vs. Epochs and Accuracy vs. Epochs](../Images/image-5.png)
 
 - **Performance Metrics**  
-   ![Performance Metrics](../Images/image-6.png)
 
 - **Confusion Matrix**  
-   ![Confusion Matrix](../Images/image-11.png)
 - **Classification Report:**
    ```
                  precision    recall  f1-score   support

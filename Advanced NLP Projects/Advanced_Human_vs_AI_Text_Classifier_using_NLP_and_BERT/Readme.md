@@ -2,10 +2,6 @@
 
 **Author:** Saqib  
 
-## Visual Interface
-
-![Application Interface](assets/screenshot.png)
-
 ## Overview
 
 This project builds a **binary text classifier** that distinguishes between human‑written text and AI‑generated text (e.g., from ChatGPT, GPT‑4, or similar models). Using a fine‑tuned BERT model, the system achieves high accuracy on a diverse dataset of human and AI samples. It is part of Saqib’s advanced NLP portfolio.

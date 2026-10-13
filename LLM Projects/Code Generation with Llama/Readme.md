@@ -2,10 +2,6 @@
 
 **Author:** Saqib  
 
-## Visual Interface
-
-![Application Interface](assets/screenshot.png)
-
 ## Overview
 
 This project uses Groq’s Llama 3.3 70B to generate code from natural language descriptions. It supports multiple languages (Python, JavaScript, SQL, Bash) and includes optional syntax validation and sandboxed execution for Python. The system acts as an AI programming assistant, translating user requests into executable code.

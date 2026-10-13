@@ -2,10 +2,6 @@
 
 **Author:** Saqib  
 
-## Visual Interface
-
-![Application Interface](assets/screenshot.png)
-
 ## Overview  
 
 This project implements a self-ask agent that uses Groq’s Llama 3.3 to decide whether a web search is needed. If the LLM determines external information is required, it generates a search query, fetches results via Tavily API, and then answers the user. This pattern mimics how advanced AI assistants (like perplexity.ai) work.
